@@ -1,2 +1,8 @@
-# home-page
-home pages of NJUPT CAST
+#HomePages of NJUPT CAST
+
+###devDependencies
+
+-  nodejs
+-  express
+-  vue.js
+-  mongodb
