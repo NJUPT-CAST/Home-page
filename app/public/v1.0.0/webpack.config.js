@@ -4,7 +4,8 @@ var webpack = require('webpack')
 module.exports = {
   entry: {
     app: './src/entry/app.js',
-    test: './src/entry/test.js'
+    test: './src/entry/test.js',
+    index: './src/entry/index.js'
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -34,7 +35,11 @@ module.exports = {
         loader: 'vue-html'
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.scss$/,
+        loader: 'style!css!sass'
+      },
+      {
+        test: /\.(png|jpg|gif|svg|woff2?|eot|ttf)(\?.*)?$/,
         loader: 'url',
         query: {
           limit: 10000,
