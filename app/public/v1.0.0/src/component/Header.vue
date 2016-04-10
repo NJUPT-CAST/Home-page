@@ -1,7 +1,8 @@
 <template lang="ejs">
     <div id="app-header">
         <div class="logo-wrap">
-            <img src="../image/logo.gif" alt="">
+            <a href=""><img src="../image/logo.gif" alt="">
+            </a>
         </div>
         <app-nav></app-nav>
     </div>
@@ -22,16 +23,20 @@
 
 <style lang="sass" scoped>
     #app-header {
+        width: 80%;
+        min-width: 1000px;
         height: 40px;
+        margin: 0 auto;
+        padding: 30px 0;
 
         .logo-wrap {
             float: left;
             width: 120px;
             height: 40px;
+            cursor: pointer;
 
             img {
                 width: 100%;
-
             }
         }
     }
