@@ -1,9 +1,10 @@
 <template lang="ejs">
-    <div class="logo-wrap">
-        <img src="../image/logo.gif" alt="">
+    <div id="app-header">
+        <div class="logo-wrap">
+            <img src="../image/logo.gif" alt="">
+        </div>
+        <app-nav></app-nav>
     </div>
-    <h1>{{ msg }}</h1>
-    <app-nav></app-nav>
 </template>
 
 <script>
@@ -20,5 +21,18 @@
 </script>
 
 <style lang="sass" scoped>
+    #app-header {
+        height: 40px;
 
+        .logo-wrap {
+            float: left;
+            width: 120px;
+            height: 40px;
+
+            img {
+                width: 100%;
+
+            }
+        }
+    }
 </style>
