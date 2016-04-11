@@ -17,26 +17,36 @@
                 </p>
             </div>
             <div class="entry-btn">
-                <button>GO&nbsp;&nbsp;EXPLORE</button>
-                <app-form></app-form>
+                <app-btn @click="formToggle"></app-btn>
             </div>
         </div>
+        <app-form v-if="formShow"></app-form>
     </div>
 </template>
 
 <script>
     import CONFIG from '../global';
-    import Form from './Form.vue'
+    import Form from './Form.vue';
+    import Button from './Button.vue';
+
 
     export default {
         components: {
-            Form
+            'app-btn': Button,
+            'app-form': Form
         },
         data() {
             return {
                 name: CONFIG.name,
                 enIntro: CONFIG.enIntro,
-                zhIntro: CONFIG.zhIntro
+                zhIntro: CONFIG.zhIntro,
+                formShow: false
+            }
+        },
+        methods: {
+            formToggle: function(event){
+                event.preventDefault();
+                this.formShow = true;
             }
         }
     }

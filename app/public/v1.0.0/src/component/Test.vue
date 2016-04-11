@@ -1,25 +1,25 @@
 <template>
-  <div id="app">
-    <h1>{{ msg }}</h1>
-  </div>
+    <header-component/>
+    <div>this is template body</div>
+    <other-component/>
 </template>
-
-<script>
-export default {
-  data () {
-    return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'This is test!'
-    }
-  }
-}
-</script>
-
 <style>
-body {
-  font-family: Helvetica, sans-serif;
-}
+    body{
+        background-color:#ff0000;
+    }
 </style>
+<script>
+    import HeaderComponent from './components/header.vue'
+    import OtherComponent from './components/other.vue'
+    export default{
+        data(){
+            return{
+                msg:'hello vue'
+            }
+        },
+        components:{
+            'other-component':OtherComponent,
+            HeaderComponent,
+        }
+    }
+</script>
