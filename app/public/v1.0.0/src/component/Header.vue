@@ -1,7 +1,7 @@
 <template lang="ejs">
     <div id="app-header">
         <div class="logo-wrap">
-            <a href=""><img src="../image/logo.gif" alt="">
+            <a href="/src/html/index.html"><img src="../image/logo.gif" alt="">
             </a>
         </div>
         <app-nav></app-nav>
