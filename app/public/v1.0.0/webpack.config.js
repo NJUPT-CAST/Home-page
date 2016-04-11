@@ -3,8 +3,6 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: {
-    app: './src/entry/app.js',
-    test: './src/entry/test.js',
     index: './src/entry/index.js',
     news: './src/entry/news.js'
   },

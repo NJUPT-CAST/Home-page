@@ -1,9 +1,10 @@
 <template lang="ejs">
     <div id="app-nav">
         <ul>
-            <li><a href=""><span>动态</span></a></li>
-            <li><a href=""><span>展板</span></a></li>
-            <li><a href=""><span>活动</span></a></li>
+            <li><a href="/src/html/intro.html"><span>简介</span></a></li>
+            <li><a href="/src/html/news.html"><span>动态</span></a></li>
+            <li><a href="/src/html/show.html"><span>展板</span></a></li>
+            <li><a href="/src/html/activity.html"><span>活动</span></a></li>
         </ul>
     </div>
 </template>
@@ -39,7 +40,6 @@
 
                     span {
                         display: inline-block;
-                        width: 40px;
                         height: $link-height;
                         line-height: $link-height;
                         text-align: center;
