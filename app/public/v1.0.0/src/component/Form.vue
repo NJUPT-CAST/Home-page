@@ -1,5 +1,5 @@
 <template lang="ejs">
-    <div id="form-bg-cover" @click="formHide">
+    <div id="form-bg-cover">
         <h1>{{ formShow }}</h1>
     </div>
 </template>
@@ -13,9 +13,7 @@
             }
         },
         methods: {
-            formHide: function(event){
-                alert(1);
-            }
+
         }
     }
 </script>
@@ -29,6 +27,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: red;
+        background-color: #333;
+        opacity: 0.7;
     }
 </style>
