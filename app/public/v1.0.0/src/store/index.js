@@ -3,17 +3,16 @@
  */
 import Vue from 'vue'
 import Vuex from 'vuex'
+import mutations from './mutation'
 
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
-    state: {
+const state = {
+    count: 0,
+    formShow: false
+}
 
-    },
-    actions: {
-
-    },
-    mutations: {
-
-    }
+export default new Vuex.Store({
+    state,
+    mutations
 })
