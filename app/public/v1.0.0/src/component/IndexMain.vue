@@ -15,20 +15,27 @@
                 <p class="chinese">
                     {{ zhIntro }}
                 </p>
+                <p>{{isFormShow}}</p>
             </div>
             <div class="entry-btn">
-                <app-btn @click="formToggle" btn-name="GO&nbsp;&nbsp;EXPLORE"></app-btn>
+                <app-btn @click="toggleFormShow" btn-name="GO&nbsp;&nbsp;EXPLORE"></app-btn>
             </div>
         </div>
-        <app-form v-if="formShow"></app-form>
+        <app-form v-if="isFormShow"></app-form>
     </div>
 </template>
 
 <script>
+    //components
     import CONFIG from '../global';
     import Form from './Form.vue';
     import Button from './Button.vue';
 
+    //common getters
+    import { isFormShow } from '../store/getters'
+
+    //actions
+    import { toggleFormShow } from '../store/action'
 
     export default {
         components: {
@@ -39,16 +46,18 @@
             return {
                 name: CONFIG.name,
                 enIntro: CONFIG.enIntro,
-                zhIntro: CONFIG.zhIntro,
-                formShow: false
+                zhIntro: CONFIG.zhIntro
             }
         },
-        methods: {
-            formToggle: function(event){
-                event.preventDefault();
-                this.formShow = true;
+        vuex: {
+            getters: {
+                isFormShow: isFormShow
+            },
+            actions: {
+                toggleFormShow
             }
         }
+
     }
 </script>
 

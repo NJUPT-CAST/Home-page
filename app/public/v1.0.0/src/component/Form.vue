@@ -1,12 +1,12 @@
 <template lang="ejs">
     <div id="form-bg-cover">
-        <h1>{{ formShow }}</h1>
+        <h1>{{ isFormShow }}</h1>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['formShow'],
+        props: ['isFormShow'],
         data() {
             return {
                 msg: "this is form component"
