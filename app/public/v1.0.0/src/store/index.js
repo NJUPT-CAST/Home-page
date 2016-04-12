@@ -10,6 +10,7 @@ import form from './modules/form'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+    //外部引用 form 的 state 需要写作 state.form.xxx
     modules: {
         form
     }
