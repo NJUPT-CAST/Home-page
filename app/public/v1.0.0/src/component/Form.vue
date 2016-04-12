@@ -1,19 +1,26 @@
 <template lang="ejs">
     <div id="form-bg-cover">
-        <h1>{{ isFormShow }}</h1>
+        <form>
+
+        </form>
     </div>
 </template>
 
 <script>
-    export default {
-        props: ['isFormShow'],
-        data() {
-            return {
-                msg: "this is form component"
-            }
-        },
-        methods: {
+    //component
+    import Cover from './Cover.vue'
 
+    //actions
+    import { toggleFormShow } from '../store/action'
+
+    export default {
+        components: {
+            'app-cover': Cover
+        },
+        vuex: {
+            action: {
+                toggleFormShow
+            }
         }
     }
 </script>
