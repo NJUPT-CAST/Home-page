@@ -1,5 +1,5 @@
 <template lang="ejs">
-    <button>GO&nbsp;&nbsp;EXPLORE</button>
+    <button>{{btnName}}</button>
 </template>
 
 <style lang="sass" scoped>
@@ -9,9 +9,9 @@
 <script>
 
     export default{
+        props: ['btnName'],
         data(){
             return{
-                msg:'hello vue'
             }
         },
         components:{

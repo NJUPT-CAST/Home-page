@@ -17,7 +17,7 @@
                 </p>
             </div>
             <div class="entry-btn">
-                <app-btn @click="formToggle"></app-btn>
+                <app-btn @click="formToggle" btn-name="GO&nbsp;&nbsp;EXPLORE"></app-btn>
             </div>
         </div>
         <app-form v-if="formShow"></app-form>
