@@ -4,7 +4,7 @@
 var generalConfig = {};
 
 generalConfig.name = 'CAST';
-generalConfig.enIntro = 'association of science and technology';
+generalConfig.enIntro = 'College of telecommunications & information engineering Association for Science and Technology';
 generalConfig.zhIntro = '南京邮电大学通院科协';
 
 module.exports = generalConfig;
