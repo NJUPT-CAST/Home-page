@@ -20,7 +20,7 @@
                 <app-btn @click="toggleFormShow" btn-name="GO&nbsp;&nbsp;EXPLORE"></app-btn>
             </div>
         </div>
-        <app-form v-if="isFormShow" @click="toggleFormShow"></app-form>
+        <app-form v-if="isFormShow"></app-form>
     </div>
 </template>
 
