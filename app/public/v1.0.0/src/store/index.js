@@ -1,18 +1,17 @@
 /**
  * Created by cuitianhao on 16/4/12.
  */
+
 import Vue from 'vue'
 import Vuex from 'vuex'
-import mutations from './mutation'
+
+import form from './modules/form'
 
 Vue.use(Vuex)
 
-const state = {
-    count: 0,
-    formShow: false
-}
-
 export default new Vuex.Store({
-    state,
-    mutations
+    //外部引用 form 的 state 需要写作 state.form.xxx
+    modules: {
+        form
+    }
 })
