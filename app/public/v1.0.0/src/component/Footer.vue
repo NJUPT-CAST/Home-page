@@ -47,6 +47,7 @@
         padding: 30px 20px;
         background-color: $footer-part-background;
         color: #aaa;
+        box-sizing: border-box;
 
         .footer-wrap {
             width: 80%;
