@@ -4,7 +4,8 @@ var webpack = require('webpack')
 module.exports = {
   entry: {
     index: './src/entry/index.js',
-    news: './src/entry/news.js'
+    news: './src/entry/news.js',
+    intro: './src/entry/intro.js'
   },
   output: {
     path: path.resolve(__dirname, './dist'),

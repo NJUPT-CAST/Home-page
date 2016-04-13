@@ -1,8 +1,13 @@
 <template lang="ejs">
-    <div class="form-wrap">
+    <div class="form-component-wrap">
         <div id="form-bg-cover" @click="toggleFormShow"></div>
-        <form>
-        </form>
+        <div id="form-wrap">
+            <form>
+                <div class="form-control">
+
+                </div>
+            </form>
+        </div>
     </div>
 </template>
 
@@ -30,8 +35,10 @@
     $form-height: 600px;
 
     $form-bg-color: #fff;
+    $form-border-radius: 10px;
 
-    .form-wrap {
+    .form-component-wrap {
+
         #form-bg-cover {
             position: absolute;
             top: 0;
@@ -41,16 +48,24 @@
             opacity: 0.7;
         }
 
-        form {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: $form-width;
-            height: $form-height;
-            margin-left: -$form-width/2;
-            margin-top: -$form-height/2;
-            background-color: $form-bg-color;
+        #form-wrap {
+            form {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: $form-width;
+                height: $form-height;
+                margin-left: -$form-width/2;
+                margin-top: -$form-height/2;
+                background-color: $form-bg-color;
+                -webkit-border-radius: $form-border-radius;
+                -moz-border-radius: $form-border-radius;
+                border-radius: $form-border-radius;
+            }
         }
+
+
+
     }
 
 
