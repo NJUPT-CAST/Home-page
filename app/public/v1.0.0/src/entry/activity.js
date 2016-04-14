@@ -6,7 +6,7 @@ var Nav = require('../component/Nav.vue');
 var Header = require('../component/Header.vue');
 var Footer = require('../component/Footer.vue');
 
-require('../style/sass/intro.scss');
+require('../style/sass/activity.scss');
 
 Vue.component('app-nav', Nav);
 Vue.component('app-header', Header);

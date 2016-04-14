@@ -7,9 +7,45 @@
 <body>
 <div class="body-wrap">
     <app-header></app-header>
-    <div id="activity-container"></div>
+    <div id="activity-container">
+        <div class="activity-list-wrap">
+            <div class="current-activity">
+                <div class="current-list-title">
+                    <h1>当前活动</h1>
+                    <div class="divider"></div>
+                </div>
+                <div class="activity-item current-item">
+                    <div class="ac-head">
+                        <div class="ac-image">
+                            <img src="../image/icon.jpg" alt="">
+                        </div>
+                        <div class="ac-title">春游</div>
+                        <div class="ac-divider"></div>
+                        <div class="ac-details">
+                            <div class="ac-person">
+                                发起人:<span>李嘉伟</span>
+                            </div>
+                            <div class="ac-type">
+                                <span class="tag">出游</span>
+                            </div>
+                            <div class="ac-time">
+                                <span>2016-04-23</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divide-line"></div>
+            <div class="history-activity">
+                <div class="history-list-title">
+                    <h1>历史活动</h1>
+                    <div class="divider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <app-footer></app-footer>
 </div>
-<script src="../../dist/intro.build.js"></script>
+<script src="../../dist/activity.build.js"></script>
 </body>
 </html>
