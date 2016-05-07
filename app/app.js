@@ -5,9 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var webpack = require('webpack');
-var webpackConfig = require('./public/v1.0.0/webpack.dev.config.js')
-var compiler = webpack(webpackConfig);
+// var webpack = require('webpack');
+// var webpackConfig = require('./public/v1.0.0/webpack.dev.config.js')
+// var compiler = webpack(webpackConfig);
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -26,9 +26,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// webpack HMR settings
-app.use(require('webpack-dev-middleware')(compiler));
-app.use(require("webpack-hot-middleware")(compiler));
+// // webpack HMR settings
+// app.use(require('webpack-dev-middleware')(compiler, {
+//     noInfo: true
+// }));
+// app.use(require("webpack-hot-middleware")(compiler));
 
 app.use('/', routes);
 app.use('/users', users);
