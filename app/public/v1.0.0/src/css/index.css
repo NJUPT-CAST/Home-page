@@ -69,16 +69,16 @@ html, body {
   height: 100%;
 }
 
-/* line 5, ../sass/index.scss */
+/* line 4, ../sass/index.scss */
 #wrap {
   height: 100%;
 }
-/* line 7, ../sass/index.scss */
+/* line 6, ../sass/index.scss */
 #wrap .hexo-section {
   height: 100%;
-  background-image: url('/src/img/../img/background.jpg?1462619575');
+  background-image: url('/src/img/../img/background.jpg?1462631412');
   background-repeat: no-repeat;
-  background-position: top left;
+  background-position: bottom center;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
