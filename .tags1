@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+input-width	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^$input-width: 300px;$/;"	function	line:5
+border-color	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^$border-color: #ddd;$/;"	function	line:6
+form-control-height	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^$form-control-height: 30px;$/;"	function	line:7
+.main-wrap	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^.main-wrap {$/;"	function	line:9
+#sign-in	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^#sign-in {$/;"	function	line:17
+.form-head	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^    .form-head {$/;"	function	line:24
+.form-input	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^    .form-input {$/;"	function	line:29
+.form-control	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^        .form-control {$/;"	function	line:31
+.form-ele	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^            .form-ele {$/;"	function	line:35
+input	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^                input {$/;"	function	line:38
+.form-label	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^            .form-label {$/;"	function	line:46
+label	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^                label {$/;"	function	line:51
+& > .col-3	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^            & > .col-3 {$/;"	function	line:59
+& > .col-9	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^            & > .col-9 {$/;"	function	line:63
+#sign-in-button	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^#sign-in-button {$/;"	function	line:71
