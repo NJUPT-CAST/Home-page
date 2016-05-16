@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img class="logo" src="./assets/logo.png">
-    <hello></hello>
+    <my-nav></my-nav>
     <p>
       Welcome to your Vue.js app!
     </p>
@@ -23,11 +23,11 @@
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Nav from './components/Nav'
 
 export default {
   components: {
-    Hello
+    'my-nav': Nav
   }
 }
 </script>
