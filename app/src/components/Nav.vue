@@ -6,7 +6,7 @@
       </li>
     </ul>
     <ul class="right-nav-menu">
-      <li v-for="item in navRight">
+      <li v-for="item in navRight" class="nav-menu-item">
         <a href="#">{{ item.itemName }}</a>
       </li>
     </ul>
@@ -18,10 +18,10 @@ export default {
   data () {
     return {
       navLeft: [
+        { itemName: 'CAST' },
         { itemName: '主页' },
         { itemName: '新闻' },
         { itemName: '活动' },
-        { itemName: '' },
         { itemName: '' }
       ],
       navRight: [
@@ -36,18 +36,30 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+  #nav {
+    padding: 0 20px;
+  }
+
   .left-nav-menu {
     float: left;
-
-    .nav-menu-item {
-      float: left;
-    }
   }
 
   .right-nav-menu {
     float: right;
-    li {
-      float: left;
+  }
+
+  ul li {
+    float: left;
+
+    a {
+      box-sizing: border-box;
+      padding: 20px 15px;
+      color: #aaa;
+      font-weight: 700;
+    }
+
+    a:hover {
+        color: #000;
     }
   }
 </style>
