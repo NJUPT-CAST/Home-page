@@ -38,6 +38,7 @@ export default {
 <style scoped lang="scss">
   #nav {
     padding: 0 20px;
+    overflow: hidden;
   }
 
   .left-nav-menu {
