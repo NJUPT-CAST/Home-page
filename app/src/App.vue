@@ -1,15 +1,18 @@
 <template>
   <div id="app">
     <my-nav></my-nav>
+    <hexo></hexo>
   </div>
 </template>
 
 <script>
 import Nav from './components/Nav'
+import Hexo from './components/Hexo'
 
 export default {
   components: {
-    'my-nav': Nav
+    'my-nav': Nav,
+    'hexo': Hexo
   }
 }
 </script>
@@ -18,7 +21,11 @@ export default {
 @import './assets/normalize.css';
 @import './assets/common.scss';
 
-html {
+html,body {
+  height: 100%;
+}
+
+#app {
   height: 100%;
 }
 
