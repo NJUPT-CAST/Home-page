@@ -1,18 +1,21 @@
 <template>
   <div id="app">
     <my-nav></my-nav>
-    <hexo></hexo>
+    <hexo-section></hexo-section>
+    <intro-section></intro-section>
   </div>
 </template>
 
 <script>
 import Nav from './components/Nav'
-import Hexo from './components/Hexo'
+import HexoSection from './components/HexoSection'
+import IntroSection from './components/IntroSection'
 
 export default {
   components: {
     'my-nav': Nav,
-    'hexo': Hexo
+    'hexo-section': HexoSection,
+    'intro-section': IntroSection
   }
 }
 </script>
