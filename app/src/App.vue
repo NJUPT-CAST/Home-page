@@ -3,6 +3,7 @@
     <my-nav></my-nav>
     <hexo-section></hexo-section>
     <intro-section></intro-section>
+    <my-footer></my-footer>
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import Nav from './components/Nav'
 import HexoSection from './components/HexoSection'
 import IntroSection from './components/IntroSection'
+import Footer from './components/Footer'
 
 export default {
   components: {
     'my-nav': Nav,
     'hexo-section': HexoSection,
-    'intro-section': IntroSection
+    'intro-section': IntroSection,
+    'my-footer': Footer
   }
 }
 </script>
