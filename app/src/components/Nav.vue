@@ -10,7 +10,7 @@
       </ul>
       <ul class="right-nav-menu">
         <li v-for="item in navRight" class="nav-menu-item">
-          <a href="#">{{ item.itemName }}</a>
+          <a v-link="{ path: '/' + item.link }">{{ item.itemName }}</a>
         </li>
       </ul>
     </div>

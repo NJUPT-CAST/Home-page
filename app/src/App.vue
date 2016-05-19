@@ -1,11 +1,10 @@
-<template>
+<template lang="ejs">
   <div id="app">
     <my-nav></my-nav>
     <div class="" id="main-container">
       <hexo-section></hexo-section>
       <intro-section></intro-section>
     </div>
-    <router-view></router-view>
     <my-footer></my-footer>
   </div>
 </template>

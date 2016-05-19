@@ -14,10 +14,10 @@ router.map({
   }
 })
 
-router.start(App, '#app')
-
 /* eslint-disable no-new */
-new Vue({
-  el: 'body',
-  components: { App }
-})
+// new Vue({
+//   el: 'body',
+//   components: { App }
+// })
+
+router.start(App, '#root')

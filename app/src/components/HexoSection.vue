@@ -1,6 +1,5 @@
 <template>
   <div class="hexo-section">
-
   </div>
 </template>
 
