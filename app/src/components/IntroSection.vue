@@ -2,8 +2,10 @@
   <div class="intro-section">
     <ul class="department-list">
       <li v-for="department in departments">
-        {{ department.name }}
-        {{ department.description }}
+        <h3>{{ department.name }}</h3>
+        <p>
+          {{ department.description }}
+        </p>
       </li>
     </ul>
   </div>
@@ -43,8 +45,16 @@ export default {
 
 <style lang="scss">
 $intro-section-height: 200px;
+$list-height: 200px;
 
 .intro-section {
-  height: $intro-section-height;
+  // height: $intro-section-height;
+
+  .department-list {
+    padding: 20px;
+    li {
+      height: $list-height;
+    }
+  }
 }
 </style>
