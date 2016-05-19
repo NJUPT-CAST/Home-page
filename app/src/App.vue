@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <my-nav></my-nav>
-    <hexo-section></hexo-section>
-    <intro-section></intro-section>
+    <div class="" id="main-container">
+      <hexo-section></hexo-section>
+      <intro-section></intro-section>
+    </div>
+    <router-view></router-view>
     <my-footer></my-footer>
   </div>
 </template>
@@ -28,11 +31,18 @@ export default {
 @import './assets/common.scss';
 
 html,body {
-  height: 100%;
+
 }
 
 #app {
-  height: 100%;
+
+  #main-container {
+
+  }
+}
+
+.clear {
+  clear: both;
 }
 
 </style>
