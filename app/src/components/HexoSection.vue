@@ -1,6 +1,5 @@
 <template>
   <div class="hexo-section">
-
   </div>
 </template>
 
@@ -17,7 +16,7 @@
 <style lang="scss">
 .hexo-section {
   width: 100%;
-  height: 100%;
+  height: 650px;
   background: url(../assets/background.jpg) no-repeat bottom center;
   background-size: cover;
 }

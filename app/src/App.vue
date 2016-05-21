@@ -1,18 +1,26 @@
-<template>
+<template lang="ejs">
   <div id="app">
     <my-nav></my-nav>
-    <hexo></hexo>
+    <div class="" id="main-container">
+      <hexo-section></hexo-section>
+      <intro-section></intro-section>
+    </div>
+    <my-footer></my-footer>
   </div>
 </template>
 
 <script>
 import Nav from './components/Nav'
-import Hexo from './components/Hexo'
+import HexoSection from './components/HexoSection'
+import IntroSection from './components/IntroSection'
+import Footer from './components/Footer'
 
 export default {
   components: {
     'my-nav': Nav,
-    'hexo': Hexo
+    'hexo-section': HexoSection,
+    'intro-section': IntroSection,
+    'my-footer': Footer
   }
 }
 </script>
@@ -22,11 +30,18 @@ export default {
 @import './assets/common.scss';
 
 html,body {
-  height: 100%;
+
 }
 
 #app {
-  height: 100%;
+
+  #main-container {
+
+  }
+}
+
+.clear {
+  clear: both;
 }
 
 </style>
