@@ -5,7 +5,7 @@
     <div id="nav">
       <ul class="left-nav-menu">
         <li v-for="item in navLeft" class="nav-menu-item">
-          <a href="#">{{ item.itemName }}</a>
+          <a v-link="{ path: '/' + item.link }">{{ item.itemName }}</a>
         </li>
       </ul>
       <ul class="right-nav-menu">
@@ -22,11 +22,25 @@ export default {
   data () {
     return {
       navLeft: [
-        { itemName: 'CAST' },
-        { itemName: '主页' },
-        { itemName: '新闻' },
-        { itemName: '活动' },
-        { itemName: '' }
+        {
+          itemName: 'CAST',
+          link: '/'
+        },
+        {
+          itemName: '主页',
+          link: '/'
+        },
+        {
+          itemName: '新闻',
+          link: 'news'
+        },
+        {
+          itemName: '活动',
+          link: 'activity'
+        },
+        {
+          itemName: ''
+        }
       ],
       navRight: [
         {
@@ -38,7 +52,7 @@ export default {
           link: 'signup'
         },
         {
-          itemName: '崔天昊',
+          itemName: '小明',
           link: 'center'
         }
       ]
@@ -50,6 +64,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 $nav-height: 48px;
+
+#nav-container {
+  margin-bottom: $nav-height;
+}
 
 #nav-background {
   position: fixed;
