@@ -5,9 +5,16 @@
         <h2>注册</h2>
       </div>
       <div class="panel-body">
-        <my-form
-          :form-data="formData"
-        ></my-form>
+        <validator name="validation">
+          <form novalidate>
+            <div class="form-control" v-for="item in formData">
+              <label class="col-md-2">{{item.name}}</label>
+              <div class="col-md-8" v-if="item.isBtn">
+                <input type="text" name="name" value="">
+              </div>
+            </div>
+          </form>
+        </validator>
       </div>
     </div>
     <div id="right-section">
@@ -22,45 +29,12 @@ import Form from './Form.vue'
 export default {
   data () {
     return {
-      formData: [
-        {
-          name: '姓名',
-          idName: 'name',
-          type: 'text'
-        },
-        {
-          name: '学号',
-          idName: 'stu-id',
-          type: 'text'
-        },
-        {
-          name: '密码',
-          idName: 'password',
-          type: 'password'
-        },
-        {
-          name: '确认密码',
-          idName: 're-password',
-          type: 'password'
-        },
-        {
-          isBtn: true,
-          btnName: '注册',
-          idName: 'sign-up-btn',
-          type: 'button'
-        }
-      ]
     }
-  },
-  components: {
-    'my-form': Form
-  },
-  methods: {
   }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../assets/signPanel.scss';
-
+@import '../assets/form.scss';
 </style>

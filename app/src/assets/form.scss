@@ -1,36 +1,6 @@
-<template lang="ejs">
-  <div class="form" v-for="item in formData">
-    <div class="form-control">
-      <label class="col-md-2">{{item.name}}</label>
-      <div class="col-md-8" v-if="item.isBtn">
-        <button
-          type={{item.type}}
-          name="button"
-          id={{item.idName}}
-          class="form-btn">
-          {{item.btnName}}
-        </button>
-      </div>
-      <input type={{item.type}} id={{item.idName}} class="col-md-8" v-else>
-    </div>
-  </div>
-</template>
-
-<script>
-export default {
-  props: ['formData'],
-  data () {
-    return {
-
-    }
-  }
-}
-</script>
-
-<style lang="scss">
 $input-height: 35px;
 
-.form {
+form {
   padding-right: 100px;
 
   .form-control {
@@ -89,4 +59,3 @@ $input-height: 35px;
     }
   }
 }
-</style>
