@@ -7,9 +7,9 @@
       <div class="panel-body">
         <validator name="validation">
           <form novalidate>
-            <div class="form-control" v-for="item in formData">
-              <label class="col-md-2">{{item.name}}</label>
-              <div class="col-md-8" v-if="item.isBtn">
+            <div class="form-control">
+              <label class="col-md-2"></label>
+              <div class="col-md-8">
                 <input type="text" name="name" value="">
               </div>
             </div>
@@ -24,8 +24,6 @@
 </template>
 
 <script>
-import Form from './Form.vue'
-
 export default {
   data () {
     return {
