@@ -1,38 +1,46 @@
+@import './common.scss';
+
 .panel-container {
-  display: flex;
-  width: 1000px;
+  box-sizing: border-box;
+  width: $min-width;
   min-width: 500px;
-  padding: 30px;
   margin: 0 auto;
+  padding: 30px;
 
-  .form-panel {
-    flex: 7;
-    border-radius: 2px;
-    border: 1px solid #aaa;
-    overflow: hidden;
-    margin-right: 20px;
+  .panel-wrap {
+    display: flex;
+    width: 100%;
 
-    .panel-head {
-      width: 100%;
-      border-bottom: 1px solid #eee;
-      h2 {
-        margin: 0;
-        padding: 10px;
-        font-size: 1em;
-        color: #999;
+    .form-panel {
+      flex: 7;
+      border-radius: 2px;
+      border: 1px solid #aaa;
+      overflow: hidden;
+      margin-right: 20px;
+
+      .panel-head {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        h2 {
+          margin: 0;
+          padding: 10px;
+          font-size: 1em;
+          color: #999;
+        }
       }
+
+      .panel-body {
+        padding: 20px 50px 20px 0;
+      }
+
     }
 
-    .panel-body {
-      padding: 20px 50px 20px 0;
+    #right-section {
+      flex: 3;
+      width: 300px;
+      border: 1px solid #aaa;
+      border-radius: 2px;
     }
-
   }
 
-  #right-section {
-    flex: 3;
-    width: 300px;
-    border: 1px solid #aaa;
-    border-radius: 2px;
-  }
 }

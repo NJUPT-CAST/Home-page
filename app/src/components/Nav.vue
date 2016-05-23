@@ -63,6 +63,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import '../assets/common.scss';
+
 $nav-height: 48px;
 
 #nav-container {
@@ -84,6 +86,7 @@ $nav-height: 48px;
   padding: 0 20px;
   overflow: hidden;
   width: 100%;
+  min-width: $min-width;
 }
 
 .left-nav-menu {

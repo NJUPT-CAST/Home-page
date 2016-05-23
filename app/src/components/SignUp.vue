@@ -1,24 +1,26 @@
 <template ejs="ejs">
   <div class="sign-up-container panel-container">
-    <div id="sign-up-panel" class="form-panel">
-      <div class="panel-head">
-        <h2>注册</h2>
-      </div>
-      <div class="panel-body">
-        <validator name="validation">
-          <form novalidate>
-            <div class="form-control">
-              <label class="col-md-2"></label>
-              <div class="col-md-8">
-                <input type="text" name="name" value="">
+    <div class="panel-wrap">
+      <div id="sign-up-panel" class="form-panel">
+        <div class="panel-head">
+          <h2>注册</h2>
+        </div>
+        <div class="panel-body">
+          <validator name="validation">
+            <form novalidate>
+              <div class="form-control">
+                <label class="col-md-2"></label>
+                <div class="col-md-8">
+                  <input type="text" name="name" value="">
+                </div>
               </div>
-            </div>
-          </form>
-        </validator>
+            </form>
+          </validator>
+        </div>
       </div>
-    </div>
-    <div id="right-section">
+      <div id="right-section">
 
+      </div>
     </div>
   </div>
 </template>

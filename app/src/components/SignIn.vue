@@ -24,5 +24,5 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/signPanel.scss';
-
+@import '../assets/form.scss';
 </style>
