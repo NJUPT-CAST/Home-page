@@ -14,6 +14,7 @@
 </script>
 
 <style lang="scss">
+
 .hexo-section {
   width: 100%;
   height: 650px;
