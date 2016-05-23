@@ -68,23 +68,25 @@ export default {
 $nav-height: 48px;
 
 #nav-container {
-  margin-bottom: $nav-height;
+  position: relative;
+  width: 100%;
+  height: $nav-height;
 }
 
 #nav-background {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
+  min-width: $min-width;
   height: $nav-height;
   background-color: #333;
   opacity: 0.8;
 }
 #nav {
-  position: fixed;
-  box-sizing: border-box;
+  position: absolute;;
   top: 0;
+  box-sizing: border-box;
   padding: 0 20px;
-  overflow: hidden;
   width: 100%;
   min-width: $min-width;
 }

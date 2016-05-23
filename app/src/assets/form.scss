@@ -1,7 +1,6 @@
 $input-height: 35px;
 
 form {
-  padding-right: 100px;
 
   .form-control {
     display: flex;
@@ -9,10 +8,12 @@ form {
 
     input {
       box-sizing: border-box;
+      width: 100%;
       height: $input-height;
       border: 1px solid #eee;
       border-radius: 2px;
-      padding: 0 5px;
+      padding: 0 7px;
+      font-weight: 700;
     }
 
     label {
@@ -20,8 +21,12 @@ form {
       text-align: right;
       height: $input-height;
       line-height: $input-height;
-      font-size: 0.9em;
+      font-size: 0.8em;
       padding-right: 20px;
+    }
+
+    .label-wrap {
+      text-align: right;
     }
 
     .col-md-2 {
@@ -55,7 +60,7 @@ form {
       border-radius: 2px;
       color: #333;
       background-color: #fff;
-      font-size: .9em;
+      font-size: .8em;
     }
   }
 }
