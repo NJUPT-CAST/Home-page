@@ -1,8 +1,8 @@
 <template ejs="ejs">
-  <div class="sign-in-container panel-container">
-    <div id="sign-in-panel" class="form-panel">
+  <div class="sign-up-container panel-container">
+    <div id="sign-up-panel" class="form-panel">
       <div class="panel-head">
-        <h2>登录</h2>
+        <h2>注册</h2>
       </div>
       <div class="panel-body">
         <my-form
@@ -24,6 +24,11 @@ export default {
     return {
       formData: [
         {
+          name: '姓名',
+          idName: 'name',
+          type: 'text'
+        },
+        {
           name: '学号',
           idName: 'stu-id',
           type: 'text'
@@ -34,9 +39,14 @@ export default {
           type: 'password'
         },
         {
+          name: '确认密码',
+          idName: 're-password',
+          type: 'password'
+        },
+        {
           isBtn: true,
-          btnName: '登录',
-          idName: 'sign-in-btn',
+          btnName: '注册',
+          idName: 'sign-up-btn',
           type: 'button'
         }
       ]
@@ -44,6 +54,8 @@ export default {
   },
   components: {
     'my-form': Form
+  },
+  methods: {
   }
 }
 </script>

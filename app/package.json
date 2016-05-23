@@ -20,10 +20,12 @@
     "debug": "^2.2.0",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
+    "mongoose": "^4.4.17",
     "morgan": "^1.7.0",
     "normalize.css": "^4.1.1",
     "serve-favicon": "^2.3.0",
     "vue": "^1.0.21",
+    "vue-resource": "^0.7.0",
     "vue-router": "^0.7.13"
   },
   "devDependencies": {
