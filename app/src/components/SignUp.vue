@@ -74,7 +74,7 @@
 export default {
   data () {
     return {
-
+      //format of data
       formInfo: {
         stuid: {
           value: ''
