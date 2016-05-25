@@ -74,7 +74,7 @@
 export default {
   data () {
     return {
-
+      //  format of data
       formInfo: {
         stuid: {
           value: ''
@@ -115,7 +115,7 @@ export default {
             }
           }
         )
-        console.log(sendInfo)
+        // console.log(sendInfo)
         this.$http({
           url: '/users/add',
           method: 'POST',

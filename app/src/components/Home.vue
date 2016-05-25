@@ -1,5 +1,5 @@
 <template lang="ejs">
-  <div class="" id="main-container">
+  <div id="main-container">
     <hexo-section></hexo-section>
     <intro-section></intro-section>
   </div>
@@ -18,5 +18,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/common.scss';
 
+#main-container {
+  width: 100%;
+  min-width: $min-width;
+}
 </style>

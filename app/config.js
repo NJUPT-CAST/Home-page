@@ -4,8 +4,8 @@ var path = require('path')
 module.exports = {
   build: {
     index: path.resolve(__dirname, 'views/index.ejs'),
-    assetsRoot: path.resolve(__dirname),
-    assetsSubDirectory: 'static',
+    assetsRoot: path.resolve(__dirname, 'static'),
+    assetsSubDirectory: '',
     assetsPublicPath: '/',
     productionSourceMap: true
   },

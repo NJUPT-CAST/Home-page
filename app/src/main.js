@@ -26,10 +26,4 @@ router.map({
   }
 })
 
-/* eslint-disable no-new */
-// new Vue({
-//   el: 'body',
-//   components: { App }
-// })
-
 router.start(App, '#root')

@@ -44,6 +44,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/common.scss';
+
 $intro-section-height: 200px;
 $list-height: 200px;
 
@@ -51,6 +53,9 @@ $list-height: 200px;
   // height: $intro-section-height;
 
   .department-list {
+    width: 80%;
+    margin: 0 auto;
+    min-width: $min-width - 2 * 20px;
     padding: 20px;
     li {
       height: $list-height;
