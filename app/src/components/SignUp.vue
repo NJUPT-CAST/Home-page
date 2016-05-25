@@ -117,7 +117,7 @@ export default {
         )
         // console.log(sendInfo)
         this.$http({
-          url: '/users/add',
+          url: '/users/signup',
           method: 'POST',
           data: sendInfo
         })

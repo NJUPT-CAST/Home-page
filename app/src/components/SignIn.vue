@@ -13,7 +13,7 @@
                   <label>学号</label>
                 </div>
                 <div class="col-md-8">
-                  <input type="text" name="stuid" value="">
+                  <input type="text" name="stuid" v-model="formInfo.stuid.value">
                 </div>
               </div>
               <div class="form-control">
@@ -21,14 +21,18 @@
                   <label>密码</label>
                 </div>
                 <div class="col-md-8">
-                  <input type="password" name="password" value="">
+                  <input type="password" name="password" v-model="formInfo.stuid.value">
                 </div>
               </div>
               <div class="form-control">
                 <div class="col-md-2 label-wrap">
                 </div>
                 <div class="col-md-8">
-                  <button id="sign-in-btn" class="form-btn">登录</button>
+                  <button
+                  id="sign-in-btn"
+                  class="form-btn"
+                  @click="signIn"
+                  >登录</button>
                 </div>
               </div>
             </form>
@@ -46,6 +50,40 @@
 export default {
   data () {
     return {
+      formInfo: {
+        stuid: {
+          value: ''
+        },
+        password: {
+          value: ''
+        }
+      }
+    }
+  },
+  methods: {
+    signIn: function (event) {
+      let formInfo = this.formInfo
+      let sendInfo = {}
+      event.preventDefault()
+      Object.keys(formInfo).map(
+        item => {
+          sendInfo[item] = formInfo[item].value
+        }
+      )
+      this.$http({
+        url: '/users/signin',
+        method: 'POST',
+        data: sendInfo
+      })
+      .then(function (response) {
+        if (response.data.state === 'success') {
+          console.log('ok')
+        } else {
+          console.log(response.data.msg)
+        }
+      }, function (response) {
+        console.log(response)
+      })
     }
   }
 }
