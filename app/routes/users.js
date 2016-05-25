@@ -12,7 +12,7 @@ router.post('/add', function(req, res, next) {
   var userInfo = req.body;
   console.log(userInfo);
   // check the info
-  usersController.addUser(userInfo);
+  usersController.addUser(userInfo, res);
   res.json({
     state: 'success',
     data: req.body

@@ -280,3 +280,123 @@ label	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	
 & > .col-3	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^            & > .col-3 {$/;"	function	line:59
 & > .col-9	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^            & > .col-9 {$/;"	function	line:63
 #sign-in-button	/Users/cuitianhao/Github/home-page/app/public/v1.0.0/src/sass/signin.scss	/^#sign-in-button {$/;"	function	line:71
+express	/Users/cuitianhao/Github/home-page/app/routes/index.js	/^var express = require('express');$/;"	variable	line:1
+router	/Users/cuitianhao/Github/home-page/app/routes/index.js	/^var router = express.Router();$/;"	variable	line:2
+name	/Users/cuitianhao/Github/home-page/app/package.json	/^  "name": "app",$/;"	function	line:2
+version	/Users/cuitianhao/Github/home-page/app/package.json	/^  "version": "1.0.0",$/;"	function	line:3
+description	/Users/cuitianhao/Github/home-page/app/package.json	/^  "description": "home page of CAST of NJUPT",$/;"	function	line:4
+author	/Users/cuitianhao/Github/home-page/app/package.json	/^  "author": "glassysky <873661157@qq.com>",$/;"	function	line:5
+private	/Users/cuitianhao/Github/home-page/app/package.json	/^  "private": true,$/;"	function	line:6
+scripts	/Users/cuitianhao/Github/home-page/app/package.json	/^  "scripts": {$/;"	function	line:7
+express	/Users/cuitianhao/Github/home-page/app/package.json	/^    "express": "nodemon .\/bin\/www",$/;"	function	line:8
+dev	/Users/cuitianhao/Github/home-page/app/package.json	/^    "dev": "nodemon build\/dev-server.js",$/;"	function	line:9
+build	/Users/cuitianhao/Github/home-page/app/package.json	/^    "build": "node build\/build.js",$/;"	function	line:10
+unit	/Users/cuitianhao/Github/home-page/app/package.json	/^    "unit": "karma start test\/unit\/karma.conf.js --single-run",$/;"	function	line:11
+e2e	/Users/cuitianhao/Github/home-page/app/package.json	/^    "e2e": "node test\/e2e\/runner.js",$/;"	function	line:12
+test	/Users/cuitianhao/Github/home-page/app/package.json	/^    "test": "npm run unit && npm run e2e",$/;"	function	line:13
+lint	/Users/cuitianhao/Github/home-page/app/package.json	/^    "lint": "eslint --ext .js,.vue src test\/unit\/specs test\/e2e\/specs"$/;"	function	line:14
+dependencies	/Users/cuitianhao/Github/home-page/app/package.json	/^  "dependencies": {$/;"	function	line:16
+babel-runtime	/Users/cuitianhao/Github/home-page/app/package.json	/^    "babel-runtime": "^6.0.0",$/;"	function	line:17
+body-parser	/Users/cuitianhao/Github/home-page/app/package.json	/^    "body-parser": "^1.15.1",$/;"	function	line:18
+cookie-parser	/Users/cuitianhao/Github/home-page/app/package.json	/^    "cookie-parser": "^1.4.1",$/;"	function	line:19
+debug	/Users/cuitianhao/Github/home-page/app/package.json	/^    "debug": "^2.2.0",$/;"	function	line:20
+ejs	/Users/cuitianhao/Github/home-page/app/package.json	/^    "ejs": "^2.4.1",$/;"	function	line:21
+express	/Users/cuitianhao/Github/home-page/app/package.json	/^    "express": "^4.13.4",$/;"	function	line:22
+mongoose	/Users/cuitianhao/Github/home-page/app/package.json	/^    "mongoose": "^4.4.17",$/;"	function	line:23
+morgan	/Users/cuitianhao/Github/home-page/app/package.json	/^    "morgan": "^1.7.0",$/;"	function	line:24
+normalize.css	/Users/cuitianhao/Github/home-page/app/package.json	/^    "normalize.css": "^4.1.1",$/;"	function	line:25
+serve-favicon	/Users/cuitianhao/Github/home-page/app/package.json	/^    "serve-favicon": "^2.3.0",$/;"	function	line:26
+vue	/Users/cuitianhao/Github/home-page/app/package.json	/^    "vue": "^1.0.21",$/;"	function	line:27
+vue-resource	/Users/cuitianhao/Github/home-page/app/package.json	/^    "vue-resource": "^0.7.0",$/;"	function	line:28
+vue-router	/Users/cuitianhao/Github/home-page/app/package.json	/^    "vue-router": "^0.7.13",$/;"	function	line:29
+vue-validator	/Users/cuitianhao/Github/home-page/app/package.json	/^    "vue-validator": "^2.1.2"$/;"	function	line:30
+devDependencies	/Users/cuitianhao/Github/home-page/app/package.json	/^  "devDependencies": {$/;"	function	line:32
+babel-core	/Users/cuitianhao/Github/home-page/app/package.json	/^    "babel-core": "^6.0.0",$/;"	function	line:33
+babel-loader	/Users/cuitianhao/Github/home-page/app/package.json	/^    "babel-loader": "^6.0.0",$/;"	function	line:34
+babel-plugin-transform-runtime	/Users/cuitianhao/Github/home-page/app/package.json	/^    "babel-plugin-transform-runtime": "^6.0.0",$/;"	function	line:35
+babel-preset-es2015	/Users/cuitianhao/Github/home-page/app/package.json	/^    "babel-preset-es2015": "^6.0.0",$/;"	function	line:36
+babel-preset-stage-2	/Users/cuitianhao/Github/home-page/app/package.json	/^    "babel-preset-stage-2": "^6.0.0",$/;"	function	line:37
+chai	/Users/cuitianhao/Github/home-page/app/package.json	/^    "chai": "^3.5.0",$/;"	function	line:38
+chromedriver	/Users/cuitianhao/Github/home-page/app/package.json	/^    "chromedriver": "^2.21.2",$/;"	function	line:39
+connect-history-api-fallback	/Users/cuitianhao/Github/home-page/app/package.json	/^    "connect-history-api-fallback": "^1.1.0",$/;"	function	line:40
+cross-spawn	/Users/cuitianhao/Github/home-page/app/package.json	/^    "cross-spawn": "^2.1.5",$/;"	function	line:41
+css-loader	/Users/cuitianhao/Github/home-page/app/package.json	/^    "css-loader": "^0.23.1",$/;"	function	line:42
+eslint	/Users/cuitianhao/Github/home-page/app/package.json	/^    "eslint": "^2.0.0",$/;"	function	line:43
+eslint-config-standard	/Users/cuitianhao/Github/home-page/app/package.json	/^    "eslint-config-standard": "^5.1.0",$/;"	function	line:44
+eslint-friendly-formatter	/Users/cuitianhao/Github/home-page/app/package.json	/^    "eslint-friendly-formatter": "^1.2.2",$/;"	function	line:45
+eslint-loader	/Users/cuitianhao/Github/home-page/app/package.json	/^    "eslint-loader": "^1.3.0",$/;"	function	line:46
+eslint-plugin-html	/Users/cuitianhao/Github/home-page/app/package.json	/^    "eslint-plugin-html": "^1.3.0",$/;"	function	line:47
+eslint-plugin-promise	/Users/cuitianhao/Github/home-page/app/package.json	/^    "eslint-plugin-promise": "^1.0.8",$/;"	function	line:48
+eslint-plugin-standard	/Users/cuitianhao/Github/home-page/app/package.json	/^    "eslint-plugin-standard": "^1.3.2",$/;"	function	line:49
+eventsource-polyfill	/Users/cuitianhao/Github/home-page/app/package.json	/^    "eventsource-polyfill": "^0.9.6",$/;"	function	line:50
+express	/Users/cuitianhao/Github/home-page/app/package.json	/^    "express": "^4.13.3",$/;"	function	line:51
+extract-text-webpack-plugin	/Users/cuitianhao/Github/home-page/app/package.json	/^    "extract-text-webpack-plugin": "^1.0.1",$/;"	function	line:52
+file-loader	/Users/cuitianhao/Github/home-page/app/package.json	/^    "file-loader": "^0.8.4",$/;"	function	line:53
+function-bind	/Users/cuitianhao/Github/home-page/app/package.json	/^    "function-bind": "^1.0.2",$/;"	function	line:54
+html-webpack-plugin	/Users/cuitianhao/Github/home-page/app/package.json	/^    "html-webpack-plugin": "^2.8.1",$/;"	function	line:55
+http-proxy-middleware	/Users/cuitianhao/Github/home-page/app/package.json	/^    "http-proxy-middleware": "^0.12.0",$/;"	function	line:56
+inject-loader	/Users/cuitianhao/Github/home-page/app/package.json	/^    "inject-loader": "^2.0.1",$/;"	function	line:57
+isparta-loader	/Users/cuitianhao/Github/home-page/app/package.json	/^    "isparta-loader": "^2.0.0",$/;"	function	line:58
+json-loader	/Users/cuitianhao/Github/home-page/app/package.json	/^    "json-loader": "^0.5.4",$/;"	function	line:59
+karma	/Users/cuitianhao/Github/home-page/app/package.json	/^    "karma": "^0.13.15",$/;"	function	line:60
+karma-coverage	/Users/cuitianhao/Github/home-page/app/package.json	/^    "karma-coverage": "^0.5.5",$/;"	function	line:61
+karma-mocha	/Users/cuitianhao/Github/home-page/app/package.json	/^    "karma-mocha": "^0.2.2",$/;"	function	line:62
+karma-phantomjs-launcher	/Users/cuitianhao/Github/home-page/app/package.json	/^    "karma-phantomjs-launcher": "^1.0.0",$/;"	function	line:63
+karma-sinon-chai	/Users/cuitianhao/Github/home-page/app/package.json	/^    "karma-sinon-chai": "^1.2.0",$/;"	function	line:64
+karma-sourcemap-loader	/Users/cuitianhao/Github/home-page/app/package.json	/^    "karma-sourcemap-loader": "^0.3.7",$/;"	function	line:65
+karma-spec-reporter	/Users/cuitianhao/Github/home-page/app/package.json	/^    "karma-spec-reporter": "0.0.24",$/;"	function	line:66
+karma-webpack	/Users/cuitianhao/Github/home-page/app/package.json	/^    "karma-webpack": "^1.7.0",$/;"	function	line:67
+lolex	/Users/cuitianhao/Github/home-page/app/package.json	/^    "lolex": "^1.4.0",$/;"	function	line:68
+mocha	/Users/cuitianhao/Github/home-page/app/package.json	/^    "mocha": "^2.4.5",$/;"	function	line:69
+nightwatch	/Users/cuitianhao/Github/home-page/app/package.json	/^    "nightwatch": "^0.8.18",$/;"	function	line:70
+ora	/Users/cuitianhao/Github/home-page/app/package.json	/^    "ora": "^0.2.0",$/;"	function	line:71
+phantomjs-prebuilt	/Users/cuitianhao/Github/home-page/app/package.json	/^    "phantomjs-prebuilt": "^2.1.3",$/;"	function	line:72
+selenium-server	/Users/cuitianhao/Github/home-page/app/package.json	/^    "selenium-server": "2.53.0",$/;"	function	line:73
+shelljs	/Users/cuitianhao/Github/home-page/app/package.json	/^    "shelljs": "^0.6.0",$/;"	function	line:74
+sinon	/Users/cuitianhao/Github/home-page/app/package.json	/^    "sinon": "^1.17.3",$/;"	function	line:75
+sinon-chai	/Users/cuitianhao/Github/home-page/app/package.json	/^    "sinon-chai": "^2.8.0",$/;"	function	line:76
+url-loader	/Users/cuitianhao/Github/home-page/app/package.json	/^    "url-loader": "^0.5.7",$/;"	function	line:77
+vue-hot-reload-api	/Users/cuitianhao/Github/home-page/app/package.json	/^    "vue-hot-reload-api": "^1.2.0",$/;"	function	line:78
+vue-html-loader	/Users/cuitianhao/Github/home-page/app/package.json	/^    "vue-html-loader": "^1.0.0",$/;"	function	line:79
+vue-loader	/Users/cuitianhao/Github/home-page/app/package.json	/^    "vue-loader": "^8.3.0",$/;"	function	line:80
+vue-style-loader	/Users/cuitianhao/Github/home-page/app/package.json	/^    "vue-style-loader": "^1.0.0",$/;"	function	line:81
+webpack	/Users/cuitianhao/Github/home-page/app/package.json	/^    "webpack": "^1.12.2",$/;"	function	line:82
+webpack-dev-middleware	/Users/cuitianhao/Github/home-page/app/package.json	/^    "webpack-dev-middleware": "^1.4.0",$/;"	function	line:83
+webpack-hot-middleware	/Users/cuitianhao/Github/home-page/app/package.json	/^    "webpack-hot-middleware": "^2.6.0",$/;"	function	line:84
+webpack-merge	/Users/cuitianhao/Github/home-page/app/package.json	/^    "webpack-merge": "^0.8.3"$/;"	function	line:85
+express	/Users/cuitianhao/Github/home-page/app/app.js	/^var express = require('express');$/;"	variable	line:1
+path	/Users/cuitianhao/Github/home-page/app/app.js	/^var path = require('path');$/;"	variable	line:2
+favicon	/Users/cuitianhao/Github/home-page/app/app.js	/^var favicon = require('serve-favicon');$/;"	variable	line:3
+logger	/Users/cuitianhao/Github/home-page/app/app.js	/^var logger = require('morgan');$/;"	variable	line:4
+cookieParser	/Users/cuitianhao/Github/home-page/app/app.js	/^var cookieParser = require('cookie-parser');$/;"	variable	line:5
+bodyParser	/Users/cuitianhao/Github/home-page/app/app.js	/^var bodyParser = require('body-parser');$/;"	variable	line:6
+routes	/Users/cuitianhao/Github/home-page/app/app.js	/^var routes = require('.\/routes\/index');$/;"	variable	line:8
+users	/Users/cuitianhao/Github/home-page/app/app.js	/^var users = require('.\/routes\/users');$/;"	variable	line:9
+connect	/Users/cuitianhao/Github/home-page/app/app.js	/^var connect = require('.\/model\/connect.js');$/;"	variable	line:11
+app	/Users/cuitianhao/Github/home-page/app/app.js	/^var app = express();$/;"	variable	line:13
+input-height	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^$input-height: 35px;$/;"	function	line:1
+form	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^form {$/;"	function	line:3
+.form-control	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^  .form-control {$/;"	function	line:5
+input	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^    input {$/;"	function	line:9
+label	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^    label {$/;"	function	line:18
+.label-wrap	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^    .label-wrap {$/;"	function	line:27
+.col-md-2	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^    .col-md-2 {$/;"	function	line:31
+.col-md-3	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^    .col-md-3 {$/;"	function	line:35
+.col-md-4	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^    .col-md-4 {$/;"	function	line:39
+.col-md-6	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^    .col-md-6 {$/;"	function	line:43
+.col-md-7	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^    .col-md-7 {$/;"	function	line:47
+.col-md-8	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^    .col-md-8 {$/;"	function	line:51
+.form-btn	/Users/cuitianhao/Github/home-page/app/src/assets/form.scss	/^    .form-btn {$/;"	function	line:55
+express	/Users/cuitianhao/Github/home-page/app/routes/users.js	/^var express = require('express');$/;"	variable	line:1
+router	/Users/cuitianhao/Github/home-page/app/routes/users.js	/^var router = express.Router();$/;"	variable	line:2
+usersController	/Users/cuitianhao/Github/home-page/app/routes/users.js	/^var usersController = require('..\/controller\/user.controller.js');$/;"	variable	line:4
+mongoose	/Users/cuitianhao/Github/home-page/app/model/users.model.js	/^var mongoose = require('mongoose');$/;"	variable	line:1
+userSchema	/Users/cuitianhao/Github/home-page/app/model/users.model.js	/^var userSchema  = mongoose.Schema({$/;"	variable	line:3
+user	/Users/cuitianhao/Github/home-page/app/model/users.model.js	/^var user = mongoose.model('user', userSchema);$/;"	variable	line:9
+usersModel	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^var usersModel = require('..\/model\/users.model.js');$/;"	variable	line:1
+findUser	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^  findUser: function (info, callback) {$/;"	function	line:4
+module.exports.findUser	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^module.exports = {$/;"	method	line:3
+addUser	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^  addUser: function (info, res) {$/;"	function	line:18
+module.exports.addUser	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^  },$/;"	method	line:17
+callback	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^    function callback () {$/;"	function	line:21
+module.exports.addUser.callback	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^    function callback () {$/;"	function	line:21

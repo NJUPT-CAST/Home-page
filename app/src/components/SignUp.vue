@@ -122,7 +122,11 @@ export default {
           data: sendInfo
         })
         .then(function (response) {
-          console.log(response)
+          if (response.data.state === 'success') {
+            console.log('ok')
+          } else {
+            console.log(response.data.msg)
+          }
         }, function (response) {
           console.log(response)
         })
