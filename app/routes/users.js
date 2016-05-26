@@ -10,9 +10,8 @@ router.get('/', function(req, res, next) {
 
 router.post('/signup', function(req, res, next) {
   var userInfo = req.body;
-  console.log(userInfo);
   // check the info
-  usersController.addUser(userInfo, res);
+  usersController.signUp(userInfo);
   res.json({
     state: 'success',
     data: req.body
@@ -23,7 +22,7 @@ router.post('/signin', function(req, res, next) {
   var userInfo = req.body;
   console.log(userInfo);
   // check the info
-  usersController.findUser(userInfo, res);
+  usersController.signIn(userInfo);
   res.json({
     state: 'success',
     data: req.body

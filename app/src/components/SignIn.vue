@@ -21,7 +21,7 @@
                   <label>密码</label>
                 </div>
                 <div class="col-md-8">
-                  <input type="password" name="password" v-model="formInfo.stuid.value">
+                  <input type="password" name="password" v-model="formInfo.password.value">
                 </div>
               </div>
               <div class="form-control">
