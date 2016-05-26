@@ -39,6 +39,7 @@ module.exports = {
         newUser = new usersModel(info);
         newUser.save(function (err, newUser) {
           if (err) return console.log(err);
+          req.session.user = result;
         });
       }
     }
@@ -47,9 +48,11 @@ module.exports = {
     findUser(info, callback);
 
     function callback (result) {
+      var state = "",
+          data = "";
+      // user exist
       if (result) {
-        var state = "",
-            data = "";
+        // password right
         if (result.password === md5Hash(info.password)) {
           state = "success";
           data = result;
@@ -58,11 +61,14 @@ module.exports = {
           state = "fail";
           data = "wrong password"
         }
-        res.json({
-          state: state,
-          data: data
-        });
+      } else {
+        state = "fail";
+        data = "user don't exist";
       }
+      res.json({
+        state: state,
+        data: data
+      });
     }
   }
 }

@@ -77,7 +77,7 @@ export default {
       })
       .then(function (response) {
         if (response.data.state === 'success') {
-          console.log(response.data.data)
+          window.location.href = '/'
         } else {
           console.log(response.data.data)
         }
