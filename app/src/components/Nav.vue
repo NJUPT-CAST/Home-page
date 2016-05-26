@@ -9,8 +9,16 @@
         </li>
       </ul>
       <ul class="right-nav-menu">
-        <li v-for="item in navRight" class="nav-menu-item">
-          <a v-link="{ path: '/' + item.link }">{{ item.itemName }}</a>
+        <li class="nav-menu-item">
+          <a v-link="{ path: '/signin' }">登录</a>
+        </li>
+        <li class="nav-menu-item">
+          <a v-link="{ path: '/signup' }">注册</a>
+        </li>
+        <li class="nav-menu-item">
+          <a v-link="{ path: '/center' }">
+            {{user.name}}
+          </a>
         </li>
       </ul>
     </div>
@@ -19,6 +27,18 @@
 
 <script>
 export default {
+  created: function () {
+    this.user.name = '456'
+    this.$http({
+      url: '/users/islog',
+      method: 'GET'
+    })
+    .then(function (response) {
+      console.log(response)
+    }, function (response) {
+      console.log('ajax fail')
+    })
+  },
   data () {
     return {
       navLeft: [
@@ -42,20 +62,9 @@ export default {
           itemName: ''
         }
       ],
-      navRight: [
-        {
-          itemName: '登录',
-          link: 'signin'
-        },
-        {
-          itemName: '注册',
-          link: 'signup'
-        },
-        {
-          itemName: '小明',
-          link: 'center'
-        }
-      ]
+      user: {
+        name: '123'
+      }
     }
   }
 }

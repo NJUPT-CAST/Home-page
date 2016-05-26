@@ -77,9 +77,9 @@ export default {
       })
       .then(function (response) {
         if (response.data.state === 'success') {
-          console.log('ok')
+          console.log(response.data.data)
         } else {
-          console.log(response.data.msg)
+          console.log(response.data.data)
         }
       }, function (response) {
         console.log(response)
