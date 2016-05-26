@@ -11,9 +11,9 @@ router.get('/', function(req, res, next) {
 router.get('/islog', function(req, res, next) {
   var state = "",
       data = "";
-  if (res.cookies.user) {
+  if (req.session.user) {
     state = "success";
-    data = res.cookies.user;
+    data = req.session.user;
   } else {
     state = "fail";
     data = "";
@@ -38,7 +38,7 @@ router.post('/signin', function(req, res, next) {
   var userInfo = req.body;
   // console.log(userInfo);
   // check the info
-  usersController.signIn(userInfo, res);
+  usersController.signIn(userInfo, req, res);
 });
 
 module.exports = router;

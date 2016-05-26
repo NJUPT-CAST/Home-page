@@ -43,7 +43,7 @@ module.exports = {
       }
     }
   },
-  signIn: function (info, res) {
+  signIn: function (info, req, res) {
     findUser(info, callback);
 
     function callback (result) {
@@ -53,15 +53,15 @@ module.exports = {
         if (result.password === md5Hash(info.password)) {
           state = "success";
           data = result;
-          res.cookies.user = result;
+          req.session.user = result;
         } else {
-          state = "success";
+          state = "fail";
+          data = "wrong password"
         }
         res.json({
           state: state,
           data: data
         });
-        // console.log(result);
       }
     }
   }

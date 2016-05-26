@@ -9,17 +9,21 @@
         </li>
       </ul>
       <ul class="right-nav-menu">
-        <li class="nav-menu-item">
-          <a v-link="{ path: '/signin' }">登录</a>
-        </li>
-        <li class="nav-menu-item">
-          <a v-link="{ path: '/signup' }">注册</a>
-        </li>
-        <li class="nav-menu-item">
-          <a v-link="{ path: '/center' }">
-            {{user.name}}
-          </a>
-        </li>
+        <template v-if="isLog">
+          <li class="nav-menu-item">
+            <a v-link="{ path: '/center' }">
+              {{user.name}}
+            </a>
+          </li>
+        </template>
+        <template v-else>
+          <li class="nav-menu-item">
+            <a v-link="{ path: '/signin' }">登录</a>
+          </li>
+          <li class="nav-menu-item">
+            <a v-link="{ path: '/signup' }">注册</a>
+          </li>
+        </template>
       </ul>
     </div>
   </div>
@@ -28,12 +32,17 @@
 <script>
 export default {
   created: function () {
-    this.user.name = '456'
     this.$http({
       url: '/users/islog',
       method: 'GET'
     })
     .then(function (response) {
+      if (response.data.state === 'success') {
+        this.isLog = true
+        this.user = response.data.data
+      } else {
+        this.isLog = false
+      }
       console.log(response)
     }, function (response) {
       console.log('ajax fail')
@@ -62,6 +71,7 @@ export default {
           itemName: ''
         }
       ],
+      isLog: false,
       user: {
         name: '123'
       }
