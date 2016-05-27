@@ -73,7 +73,7 @@ export default {
       ],
       isLog: false,
       user: {
-        name: '123'
+        name: ''
       }
     }
   }

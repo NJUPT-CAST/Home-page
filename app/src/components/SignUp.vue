@@ -123,9 +123,9 @@ export default {
         })
         .then(function (response) {
           if (response.data.state === 'success') {
-            console.log('ok')
+            window.location.href = '/'
           } else {
-            console.log(response.data.msg)
+            console.log(response.data.data)
           }
         }, function (response) {
           console.log(response)
