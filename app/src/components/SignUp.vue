@@ -117,12 +117,16 @@ export default {
         )
         // console.log(sendInfo)
         this.$http({
-          url: '/users/add',
+          url: '/users/signup',
           method: 'POST',
           data: sendInfo
         })
         .then(function (response) {
-          console.log(response)
+          if (response.data.state === 'success') {
+            window.location.href = '/'
+          } else {
+            console.log(response.data.data)
+          }
         }, function (response) {
           console.log(response)
         })

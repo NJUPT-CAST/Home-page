@@ -8,15 +8,37 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.post('/add', function(req, res, next) {
+router.get('/islog', function(req, res, next) {
+  var state = "",
+      data = "";
+  if (req.session.user) {
+    state = "success";
+    data = req.session.user;
+  } else {
+    state = "fail";
+    data = "";
+  }
+  res.json({
+    state: state,
+    data: data
+  });
+});
+
+router.post('/signup', function(req, res, next) {
   var userInfo = req.body;
-  console.log(userInfo);
   // check the info
-  usersController.addUser(userInfo);
+  usersController.signUp(userInfo);
   res.json({
     state: 'success',
     data: req.body
   });
+});
+
+router.post('/signin', function(req, res, next) {
+  var userInfo = req.body;
+  // console.log(userInfo);
+  // check the info
+  usersController.signIn(userInfo, req, res);
 });
 
 module.exports = router;
