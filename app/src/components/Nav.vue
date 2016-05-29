@@ -3,27 +3,34 @@
     <div id="nav-background">
     </div>
     <div id="nav">
-      <ul class="left-nav-menu">
+      <ul class="left-nav-menu nav-menu">
         <li v-for="item in navLeft" class="nav-menu-item">
           <a v-link="{ path: '/' + item.link }">{{ item.itemName }}</a>
         </li>
       </ul>
-      <ul class="right-nav-menu">
-        <template v-if="isLog">
+      <ul class="right-nav-menu nav-menu">
+        <!-- <template v-if="isLog"> -->
           <li class="nav-menu-item">
             <a v-link="{ path: '/center' }">
               {{user.name}}
+              <span id="triangle-container">
+                <i class="triangle"></i>
+              </span>
             </a>
+            <ul id="toggle-nav-menu">
+              <li><a href="">个人中心</a></li>
+              <li><a href="">注销</a></li>
+            </ul>
           </li>
-        </template>
-        <template v-else>
+        <!-- </template> -->
+        <!-- <template v-else> -->
           <li class="nav-menu-item">
             <a v-link="{ path: '/signin' }">登录</a>
           </li>
           <li class="nav-menu-item">
             <a v-link="{ path: '/signup' }">注册</a>
           </li>
-        </template>
+        <!-- </template> -->
       </ul>
     </div>
   </div>
@@ -73,7 +80,7 @@ export default {
       ],
       isLog: false,
       user: {
-        name: ''
+        name: '123'
       }
     }
   }
@@ -85,6 +92,7 @@ export default {
 @import '../assets/common.scss';
 
 $nav-height: 48px;
+$nav-bg-color: #333;
 
 #nav-container {
   position: relative;
@@ -98,7 +106,7 @@ $nav-height: 48px;
   width: 100%;
   min-width: $min-width;
   height: $nav-height;
-  background-color: #333;
+  background-color: $nav-bg-color;
   opacity: 0.8;
 }
 #nav {
@@ -108,6 +116,22 @@ $nav-height: 48px;
   padding: 0 20px;
   width: 100%;
   min-width: $min-width;
+
+  ul {
+    margin: 0;
+    height: $nav-height;
+  }
+}
+
+#triangle-container {
+  $triangle-side: 5px;
+  .triangle {
+    display: inline-block;
+    border-top: $triangle-side solid black;
+    border-right: $triangle-side solid black;
+    border-bottom: $triangle-side solid black;
+    border-left: $triangle-side solid black;
+  }
 }
 
 .left-nav-menu {
@@ -118,18 +142,37 @@ $nav-height: 48px;
   float: right;
 }
 
-ul li {
+.nav-menu > li {
   float: left;
 
   a {
+    display: inline-block;
+    width: 100%;
+    height: $nav-height;
+    line-height: $nav-height;
     box-sizing: border-box;
-    padding: 20px 15px;
+    padding: 0 15px;
     color: #aaa;
     font-weight: 700;
+    text-align: center;
   }
 
   a:hover {
     color: #fff;
+  }
+}
+
+ul#toggle-nav-menu {
+  background-color: #555;
+  height: auto;
+  li {
+    a {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 100%;
+      text-align: center;
+      border-left: 5px solid #fff;
+    }
   }
 }
 </style>
