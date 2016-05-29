@@ -13,8 +13,8 @@
           <li class="nav-menu-item">
             <a
             v-link="{ path: '/center' }"
-            @mouseover="showMenu"
-            @mouseout="hiddenMenu"
+            @mouseover="toggleMenu(true)"
+            @mouseout="toggleMenu(false)"
             class="toggle-link">
               <span class="name-wrap">
                 {{user.name}}
@@ -25,7 +25,9 @@
             </a>
             <ul
             id="toggle-nav-menu"
-            v-show="isShow">
+            v-show="isShow"
+            @mouseover="toggleMenu(true)"
+            @mouseout="toggleMenu(false)">
               <li><a href="">个人中心</a></li>
               <li><a href="">注销</a></li>
             </ul>
@@ -99,6 +101,9 @@ export default {
     },
     hiddenMenu: function (event) {
       this.isShow = false
+    },
+    toggleMenu: function (isShow) {
+      this.isShow = isShow
     }
   }
 }
@@ -149,6 +154,7 @@ $nav-bg-color: #333;
 }
 
 .nav-menu > li {
+  position: relative;
   float: left;
 
   a {
@@ -176,13 +182,14 @@ $nav-bg-color: #333;
 
 ul#toggle-nav-menu {
   position: absolute;
+  right: 0;
   background-color: #555;
+  width: 150px;
   height: auto;
   li {
     a {
       display: inline-block;
       box-sizing: border-box;
-      width: 100%;
       text-align: center;
       border-left: 3px solid #fff;
     }
