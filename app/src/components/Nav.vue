@@ -9,28 +9,36 @@
         </li>
       </ul>
       <ul class="right-nav-menu nav-menu">
-        <!-- <template v-if="isLog"> -->
+        <template v-if="isLog">
           <li class="nav-menu-item">
-            <a v-link="{ path: '/center' }">
-              {{user.name}}
-              <span id="triangle-container">
-                <i class="triangle"></i>
+            <a
+            v-link="{ path: '/center' }"
+            @mouseover="showMenu"
+            @mouseout="hiddenMenu"
+            class="toggle-link">
+              <span class="name-wrap">
+                {{user.name}}
+              </span>
+              <span style="float:right">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
               </span>
             </a>
-            <ul id="toggle-nav-menu">
+            <ul
+            id="toggle-nav-menu"
+            v-show="isShow">
               <li><a href="">个人中心</a></li>
               <li><a href="">注销</a></li>
             </ul>
           </li>
-        <!-- </template> -->
-        <!-- <template v-else> -->
+        </template>
+        <template v-else>
           <li class="nav-menu-item">
             <a v-link="{ path: '/signin' }">登录</a>
           </li>
           <li class="nav-menu-item">
             <a v-link="{ path: '/signup' }">注册</a>
           </li>
-        <!-- </template> -->
+        </template>
       </ul>
     </div>
   </div>
@@ -81,7 +89,16 @@ export default {
       isLog: false,
       user: {
         name: '123'
-      }
+      },
+      isShow: false
+    }
+  },
+  methods: {
+    showMenu: function (event) {
+      this.isShow = true
+    },
+    hiddenMenu: function (event) {
+      this.isShow = false
     }
   }
 }
@@ -123,17 +140,6 @@ $nav-bg-color: #333;
   }
 }
 
-#triangle-container {
-  $triangle-side: 5px;
-  .triangle {
-    display: inline-block;
-    border-top: $triangle-side solid black;
-    border-right: $triangle-side solid black;
-    border-bottom: $triangle-side solid black;
-    border-left: $triangle-side solid black;
-  }
-}
-
 .left-nav-menu {
   float: left;
 }
@@ -160,9 +166,16 @@ $nav-bg-color: #333;
   a:hover {
     color: #fff;
   }
+
+  .toggle-link {
+    .name-wrap {
+      padding: 0 15px;
+    }
+  }
 }
 
 ul#toggle-nav-menu {
+  position: absolute;
   background-color: #555;
   height: auto;
   li {
@@ -171,7 +184,7 @@ ul#toggle-nav-menu {
       box-sizing: border-box;
       width: 100%;
       text-align: center;
-      border-left: 5px solid #fff;
+      border-left: 3px solid #fff;
     }
   }
 }
