@@ -12,7 +12,7 @@
         <template v-if="isLog">
           <li class="nav-menu-item">
             <a
-            v-link="{ path: '/center' }"
+            href="javascript:void(0)"
             @mouseover="toggleMenu(true)"
             @mouseout="toggleMenu(false)"
             class="toggle-link">
@@ -28,7 +28,7 @@
             v-show="isShow"
             @mouseover="toggleMenu(true)"
             @mouseout="toggleMenu(false)">
-              <li><a href="">个人中心</a></li>
+              <li><a v-link="{ path: '/center' }">个人中心</a></li>
               <li><a href="">注销</a></li>
             </ul>
           </li>
