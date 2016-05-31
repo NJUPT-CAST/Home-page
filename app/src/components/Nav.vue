@@ -29,7 +29,11 @@
             @mouseover="toggleMenu(true)"
             @mouseout="toggleMenu(false)">
               <li><a v-link="{ path: '/center' }">个人中心</a></li>
-              <li><a href="">注销</a></li>
+              <li>
+                <a
+                href="javascript:void(0)"
+                @click="signOut">
+                注销</a></li>
             </ul>
           </li>
         </template>
@@ -104,6 +108,21 @@ export default {
     },
     toggleMenu: function (isShow) {
       this.isShow = isShow
+    },
+    signOut: function (event) {
+      this.$http({
+        url: '/users/signout',
+        method: 'GET'
+      })
+      .then(function (response) {
+        if (response.data.state === 'success') {
+          window.location.reload()
+        } else {
+          console.log(response.data.data)
+        }
+      }, function (response) {
+        console.log(response)
+      })
     }
   }
 }

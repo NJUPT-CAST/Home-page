@@ -70,5 +70,14 @@ module.exports = {
         data: data
       });
     }
+  },
+  signOut: function (req, res) {
+    req.session.destroy(function (err) {
+      if (err) return err;
+      res.json({
+        state: "success",
+        data: ""
+      });
+    });
   }
 }
