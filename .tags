@@ -400,3 +400,10 @@ addUser	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^ 
 module.exports.addUser	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^  },$/;"	method	line:17
 callback	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^    function callback () {$/;"	function	line:21
 module.exports.addUser.callback	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^    function callback () {$/;"	function	line:21
+html	/Users/cuitianhao/Github/home-page/app/index.html	/^<html>$/;"	function	line:2
+head	/Users/cuitianhao/Github/home-page/app/index.html	/^  <head>$/;"	function	line:3
+meta	/Users/cuitianhao/Github/home-page/app/index.html	/^    <meta charset="utf-8">$/;"	function	line:4
+title	/Users/cuitianhao/Github/home-page/app/index.html	/^    <title>app<\/title>$/;"	function	line:5
+link	/Users/cuitianhao/Github/home-page/app/index.html	/^    <link href="\/\/netdna.bootstrapcdn.com\/font-awesome\/4.5.0\/css\/font-awesome.min.css" rel="stylesheet">$/;"	function	line:6
+body	/Users/cuitianhao/Github/home-page/app/index.html	/^  <body>$/;"	function	line:8
+div	/Users/cuitianhao/Github/home-page/app/index.html	/^    <div id="root"><\/div>$/;"	function	line:9

@@ -4,10 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-usersModel	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^var usersModel = require('..\/model\/users.model.js');$/;"	variable	line:1
-findUser	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^  findUser: function (info, callback) {$/;"	function	line:4
-module.exports.findUser	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^module.exports = {$/;"	method	line:3
-addUser	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^  addUser: function (info, res) {$/;"	function	line:18
-module.exports.addUser	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^  },$/;"	method	line:17
-callback	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^    function callback () {$/;"	function	line:21
-module.exports.addUser.callback	/Users/cuitianhao/Github/home-page/app/controller/user.controller.js	/^    function callback () {$/;"	function	line:21

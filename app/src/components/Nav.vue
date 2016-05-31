@@ -3,17 +3,34 @@
     <div id="nav-background">
     </div>
     <div id="nav">
-      <ul class="left-nav-menu">
+      <ul class="left-nav-menu nav-menu">
         <li v-for="item in navLeft" class="nav-menu-item">
           <a v-link="{ path: '/' + item.link }">{{ item.itemName }}</a>
         </li>
       </ul>
-      <ul class="right-nav-menu">
+      <ul class="right-nav-menu nav-menu">
         <template v-if="isLog">
           <li class="nav-menu-item">
-            <a v-link="{ path: '/center' }">
-              {{user.name}}
+            <a
+            href="javascript:void(0)"
+            @mouseover="toggleMenu(true)"
+            @mouseout="toggleMenu(false)"
+            class="toggle-link">
+              <span class="name-wrap">
+                {{user.name}}
+              </span>
+              <span style="float:right">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
             </a>
+            <ul
+            id="toggle-nav-menu"
+            v-show="isShow"
+            @mouseover="toggleMenu(true)"
+            @mouseout="toggleMenu(false)">
+              <li><a v-link="{ path: '/center' }">个人中心</a></li>
+              <li><a href="">注销</a></li>
+            </ul>
           </li>
         </template>
         <template v-else>
@@ -73,8 +90,20 @@ export default {
       ],
       isLog: false,
       user: {
-        name: ''
-      }
+        name: '123'
+      },
+      isShow: false
+    }
+  },
+  methods: {
+    showMenu: function (event) {
+      this.isShow = true
+    },
+    hiddenMenu: function (event) {
+      this.isShow = false
+    },
+    toggleMenu: function (isShow) {
+      this.isShow = isShow
     }
   }
 }
@@ -85,6 +114,7 @@ export default {
 @import '../assets/common.scss';
 
 $nav-height: 48px;
+$nav-bg-color: #333;
 
 #nav-container {
   position: relative;
@@ -98,7 +128,7 @@ $nav-height: 48px;
   width: 100%;
   min-width: $min-width;
   height: $nav-height;
-  background-color: #333;
+  background-color: $nav-bg-color;
   opacity: 0.8;
 }
 #nav {
@@ -108,6 +138,11 @@ $nav-height: 48px;
   padding: 0 20px;
   width: 100%;
   min-width: $min-width;
+
+  ul {
+    margin: 0;
+    height: $nav-height;
+  }
 }
 
 .left-nav-menu {
@@ -118,18 +153,46 @@ $nav-height: 48px;
   float: right;
 }
 
-ul li {
+.nav-menu > li {
+  position: relative;
   float: left;
 
   a {
+    display: inline-block;
+    width: 100%;
+    height: $nav-height;
+    line-height: $nav-height;
     box-sizing: border-box;
-    padding: 20px 15px;
+    padding: 0 15px;
     color: #aaa;
     font-weight: 700;
+    text-align: center;
   }
 
   a:hover {
     color: #fff;
+  }
+
+  .toggle-link {
+    .name-wrap {
+      padding: 0 15px;
+    }
+  }
+}
+
+ul#toggle-nav-menu {
+  position: absolute;
+  right: 0;
+  background-color: #555;
+  width: 150px;
+  height: auto;
+  li {
+    a {
+      display: inline-block;
+      box-sizing: border-box;
+      text-align: center;
+      border-left: 3px solid #fff;
+    }
   }
 }
 </style>
