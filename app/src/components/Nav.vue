@@ -51,6 +51,8 @@
 </template>
 
 <script>
+import { getInfo } from '../../vuex/getters'
+import { infoRecorder } from '../../vuex/actions'
 export default {
   created: function () {
     this.$http({
@@ -61,11 +63,13 @@ export default {
       if (response.data.state === 'success') {
         this.isLog = true
         this.user = response.data.data
+        this.getInfo()
       } else {
         this.isLog = false
       }
       console.log(response)
     }, function (response) {
+      this.getInfo('122')
       console.log('ajax fail')
     })
   },
@@ -123,6 +127,14 @@ export default {
       }, function (response) {
         console.log(response)
       })
+    }
+  },
+  vuex: {
+    getters: {
+      user: getInfo
+    },
+    actions: {
+      getInfo: infoRecorder
     }
   }
 }
