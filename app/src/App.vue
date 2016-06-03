@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import store from '../vuex/store'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 
@@ -14,7 +15,8 @@ export default {
   components: {
     'my-nav': Nav,
     'my-footer': Footer
-  }
+  },
+  store: store
 }
 </script>
 

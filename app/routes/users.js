@@ -41,4 +41,8 @@ router.post('/signin', function(req, res, next) {
   usersController.signIn(userInfo, req, res);
 });
 
+router.get('/signout', function(req, res, next) {
+  usersController.signOut(req, res);
+});
+
 module.exports = router;

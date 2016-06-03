@@ -29,7 +29,11 @@
             @mouseover="toggleMenu(true)"
             @mouseout="toggleMenu(false)">
               <li><a v-link="{ path: '/center' }">个人中心</a></li>
-              <li><a href="">注销</a></li>
+              <li>
+                <a
+                href="javascript:void(0)"
+                @click="signOut">
+                注销</a></li>
             </ul>
           </li>
         </template>
@@ -47,6 +51,8 @@
 </template>
 
 <script>
+import { getInfo } from '../../vuex/getters'
+import { infoRecorder } from '../../vuex/actions'
 export default {
   created: function () {
     this.$http({
@@ -57,11 +63,13 @@ export default {
       if (response.data.state === 'success') {
         this.isLog = true
         this.user = response.data.data
+        this.getInfo()
       } else {
         this.isLog = false
       }
       console.log(response)
     }, function (response) {
+      this.getInfo('122')
       console.log('ajax fail')
     })
   },
@@ -104,6 +112,29 @@ export default {
     },
     toggleMenu: function (isShow) {
       this.isShow = isShow
+    },
+    signOut: function (event) {
+      this.$http({
+        url: '/users/signout',
+        method: 'GET'
+      })
+      .then(function (response) {
+        if (response.data.state === 'success') {
+          window.location.reload()
+        } else {
+          console.log(response.data.data)
+        }
+      }, function (response) {
+        console.log(response)
+      })
+    }
+  },
+  vuex: {
+    getters: {
+      user: getInfo
+    },
+    actions: {
+      getInfo: infoRecorder
     }
   }
 }
