@@ -53,10 +53,11 @@
 <script>
 import { getInfo } from '../../vuex/getters'
 import { infoRecorder } from '../../vuex/actions'
+import CONFIG from '../../config.js'
 export default {
   created: function () {
     this.$http({
-      url: '/users/islog',
+      url: CONFIG.myDev.preUrl + '/users/islog',
       method: 'GET'
     })
     .then(function (response) {
@@ -67,7 +68,7 @@ export default {
       } else {
         this.isLog = false
       }
-      console.log(response)
+      // console.log(response)
     }, function (response) {
       this.getInfo('122')
       console.log('ajax fail')

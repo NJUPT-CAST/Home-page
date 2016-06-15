@@ -12,5 +12,8 @@ module.exports = {
   dev: {
     port: 8080,
     proxyTable: {}
+  },
+  myDev: {
+    preUrl: 'http://localhost:3000'
   }
 }

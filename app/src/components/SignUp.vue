@@ -71,6 +71,7 @@
 </template>
 
 <script>
+import CONFIG from '../../config.js'
 export default {
   data () {
     return {
@@ -116,9 +117,7 @@ export default {
           }
         )
         // console.log(sendInfo)
-        this.$http({
-          url: '/users/signup',
-          method: 'POST',
+        this.$http.post(CONFIG.myDev.preUrl + '/users/signup', {
           data: sendInfo
         })
         .then(function (response) {
