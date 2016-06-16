@@ -35,8 +35,7 @@ router.post('/signup', function(req, res, next) {
 });
 
 router.post('/signin', function(req, res, next) {
-  var userInfo = req.body;
-  // console.log(userInfo);
+  var userInfo = req.body.data;
   // check the info
   usersController.signIn(userInfo, req, res);
 });

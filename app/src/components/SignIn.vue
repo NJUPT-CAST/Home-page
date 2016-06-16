@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import CONFIG from '../../config.js'
 export default {
   data () {
     return {
@@ -70,9 +71,7 @@ export default {
           sendInfo[item] = formInfo[item].value
         }
       )
-      this.$http({
-        url: '/users/signin',
-        method: 'POST',
+      this.$http.post(CONFIG.myDev.preUrl + '/users/signin', {
         data: sendInfo
       })
       .then(function (response) {
@@ -82,7 +81,7 @@ export default {
           console.log(response.data.data)
         }
       }, function (response) {
-        console.log(response)
+        console.log('ajax fail')
       })
     }
   }
